@@ -54,7 +54,7 @@
             this.canvas.Name = "canvas";
             this.canvas.Size = new System.Drawing.Size(400, 400);
             this.canvas.TabIndex = 2;
-            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
             // 
             // points
             // 
@@ -78,7 +78,7 @@
             // 
             // gameloop
             // 
-            this.gameloop.Tick += new System.EventHandler(this.timer1_Tick);
+            this.gameloop.Tick += new System.EventHandler(this.gameloop_Tick);
             // 
             // SnakeGame
             // 
@@ -90,6 +90,7 @@
             this.Controls.Add(this.canvas);
             this.Controls.Add(this.title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SnakeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snake";
